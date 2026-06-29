@@ -1,0 +1,144 @@
+.footer-area {
+  background-color: var(--bg-footer);
+  color: #f8fafc;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-brand h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2rem;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.footer-nav {
+  display: flex;
+}
+
+.footer-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #94a3b8;
+  transition: all 0.25s ease;
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.footer-nav-link:hover {
+  color: white;
+}
+
+.footer-nav-link.active {
+  color: #818cf8; /* Light Indigo */
+}
+
+.footer-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #818cf8;
+  border-radius: 2px;
+}
+
+/* Scroll to top button */
+.scroll-top-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background-color: #334155;
+  margin: 0;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .footer-nav {
+    width: 100%;
+  }
+  .footer-nav-links {
+    gap: 1.5rem;
+  }
+  .scroll-top-btn {
+    align-self: flex-end;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

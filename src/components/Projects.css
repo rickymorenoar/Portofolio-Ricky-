@@ -1,0 +1,420 @@
+.projects-section {
+  background-color: var(--bg-projects);
+}
+
+.projects-tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.projects-tabs {
+  display: inline-flex;
+  background-color: var(--color-primary-light);
+  padding: 0.3rem;
+  border-radius: 8px;
+  gap: 0.15rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.tab-btn.active {
+  background-color: white;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+/* Projects grid container */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Left Column: Project Cards List */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-card-item {
+  background-color: var(--color-card-bg);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  position: relative;
+}
+
+.card-color-strip {
+  width: 12px;
+  align-self: stretch;
+}
+
+.project-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-card-cat {
+  color: var(--color-primary);
+}
+
+.project-card-date {
+  color: var(--color-text-muted);
+}
+
+.project-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+}
+
+.project-card-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card-arrow {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  transition: gap 0.2s ease;
+}
+
+.project-card-item:hover .project-card-arrow {
+  gap: 0.5rem;
+}
+
+.project-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
+}
+
+.project-card-item.active {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg), 0 0 0 1px var(--color-primary);
+}
+
+/* Right Column: Project Detail Panel */
+.project-detail-panel {
+  background-color: var(--color-card-bg);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+}
+
+.detail-header-bg {
+  height: 140px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.detail-header-badge {
+  background-color: white;
+  color: var(--color-text-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-content {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-meta {
+  display: flex;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.detail-date {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.detail-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  line-height: 1.25;
+}
+
+.detail-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.detail-subheading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.detail-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.detail-features-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.detail-features-list li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.detail-stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.detail-stack-tags .tech-tag {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.detail-actions .btn {
+  flex: 1;
+}
+
+.no-projects {
+  padding: 3rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/*
+  Mobile Modal Overlay styling
+  - Overlay full-screen (top: 0, height: 100vh) — TIDAK dipotong oleh
+    --nav-height, supaya card detail tetap berukuran penuh seperti semula
+    (sebelumnya sempat jadi kekecilan/mentok karena tingginya ikut dikurangi
+    var(--nav-height)).
+  - z-index: 900, sengaja DI BAWAH navbar (Navbar.css: z-index: 1000), supaya
+    navbar tetap tampil paling atas dan terlihat solid. Navbar dipaksa solid
+    (prop forceSolid, dipicu lewat callback onModalToggle dari komponen ini)
+    sehingga tidak ada celah/tembus transparan di belakangnya saat overlay
+    gelap+blur ini aktif.
+*/
+.mobile-detail-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.mobile-detail-modal-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .projects-grid {
+    gap: 1.5rem;
+  }
+  .detail-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-detail-panel {
+    display: none;
+  }
+  .project-card-arrow {
+    display: flex;
+  }
+
+  .projects-tabs-container {
+    margin-bottom: 2rem;
+  }
+  .projects-tabs {
+    padding: 0.25rem;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  .tab-btn {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+  }
+
+  .project-card-item {
+    border-radius: 14px;
+  }
+  .project-card-body {
+    padding: 1.1rem;
+  }
+  .project-card-title {
+    font-size: 1.1rem;
+  }
+  .project-card-desc {
+    font-size: 0.88rem;
+  }
+
+  .mobile-detail-modal-card .detail-content {
+    padding: 1.2rem;
+  }
+  .mobile-detail-modal-card .detail-title {
+    font-size: 1.3rem;
+  }
+  .mobile-detail-modal-card .detail-desc {
+    font-size: 0.95rem;
+  }
+  .mobile-detail-modal-card .detail-header-bg {
+    height: 100px;
+  }
+  .detail-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .tab-btn {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  touch-action: none; /* Mematikan gesture geser layar di mobile */
+}
