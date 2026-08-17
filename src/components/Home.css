@@ -2,8 +2,12 @@
   background-color: var(--bg-home);
   display: flex;
   align-items: center;
-  min-height: 100vh;
-  padding-top: calc(var(--nav-height) + 20px);
+  justify-content: center;
+  height: 100vh;
+  min-height: 620px;
+  padding-top: var(--nav-height);
+  padding-bottom: 2rem;
+  overflow: hidden;
 }
 
 .home-container {
@@ -37,9 +41,7 @@
   line-height: 1.1;
   margin-bottom: 1rem;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, var(--color-text-dark) 50%, var(--color-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-text-dark);
 }
 
 .home-role-wrapper {
@@ -59,7 +61,8 @@
   color: var(--color-text-muted);
   margin-bottom: 2.5rem;
   max-width: 540px;
-  line-height: 1.7;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .home-cta-group {

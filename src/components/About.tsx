@@ -53,7 +53,7 @@ export const About: React.FC = () => {
               Di luar aspek teknis coding, saya sangat menikmati proses mendesain antarmuka pengguna (UI/UX) yang intuitif. Memperhatikan detail kecil seperti micro-interactions dan transisi yang halus adalah hal yang selalu saya upayakan demi meningkatkan kenyamanan pengguna ketika berselancar di website yang saya bangun.
             </p>
             <p className="about-text">
-              Sebagai seorang pengembang, filosofi utama saya adalah "apa yang sudah diambil harus diselesaikan". Saya percaya bahwa menyelesaikan sebuah tanggung jawab proyek hingga tuntas—menghadapi setiap bug dan tantangan di dalamnya—adalah kunci utama untuk terus berkembang dan melahirkan produk digital berkualitas.
+              Sebagai seorang pengembang, filosofi utama saya adalah "apa yang sudah diambil harus diselesaikan". Saya percaya bahwa menyelesaikan sebuah tanggung jawab hingga tuntas, menghadapi setiap masalah dan tantangan di dalamnya adalah kunci utama untuk terus berkembang dan melahirkan produk digital berkualitas.
             </p>
           </div>
 
