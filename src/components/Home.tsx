@@ -18,7 +18,7 @@ export const Home: React.FC<HomeProps> = ({ onContactClick, onProjectsClick }) =
             <span className="home-role">Pelajar SMK Negeri 2 Buduran</span>
           </div>
           <p className="home-description">
-           Seorang pelajar dari SMK Negeri 2 Buduran yang memiliki ketertarikan dalam bidang web development, UI/UX design, dan teknologi terbaru.
+           Seorang pelajar dari SMK Negeri 2 Buduran yang memiliki ketertarikan dalam bidang web development, Robotika, dan teknologi terbaru.
           </p>
           <div className="home-cta-group">
             <button className="btn btn-primary" onClick={onProjectsClick}>

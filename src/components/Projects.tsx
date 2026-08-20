@@ -165,7 +165,7 @@ export const Projects: React.FC<ProjectsProps> = ({ isModalOpen, setIsModalOpen 
       demoUrl: '#',
       githubUrl: 'https://github.com/rickymorenoar/website-absensi-qr',
       date: 'Juni 2026',
-      image: '',
+      image: '/projects/qr-attendence.webp',
     },
     {
       id: 'p3',
@@ -182,7 +182,7 @@ export const Projects: React.FC<ProjectsProps> = ({ isModalOpen, setIsModalOpen 
       demoUrl: 'https://class-attractive-40.vercel.app/',
       githubUrl: 'https://github.com/rickymorenoar/website-kelas',
       date: 'November 2025',
-      image: '',
+      image: '/projects/class-attractive.webp',
     },
     {
       id: 'p4',
@@ -200,7 +200,7 @@ export const Projects: React.FC<ProjectsProps> = ({ isModalOpen, setIsModalOpen 
       demoUrl: '#',
       githubUrl: 'https://github.com/rickymorenoar/kas-kelas',
       date: 'Oktober 2025',
-      image: '',
+      image: '/projects/kas-kelas.webp',
     },
     {
       id: 'p6',
@@ -235,23 +235,6 @@ export const Projects: React.FC<ProjectsProps> = ({ isModalOpen, setIsModalOpen 
       githubUrl: 'https://github.com/rickymorenoar',
       date: 'Mei 2026',
       image: '/projects/rfid-door.webp',
-    },
-    {
-      id: 'p8',
-      title: 'Aplikasi Mobile & Solusi Cross-Platform',
-      category: 'Mobile Apps',
-      shortDesc: 'Pengembangan aplikasi mobile berbasis iOS dan Android dengan performa native tinggi.',
-      fullDesc: 'Platform mobile serbaguna yang dirancang menggunakan React Native dan TypeScript untuk memberikan pengalaman aplikasi mobile yang responsif, terintegrasi dengan REST API dan penyimpanan lokal.',
-      features: [
-        'Performa tinggi dengan arsitektur React Native',
-        'Pengelolaan state global dan mode offline (Local Caching)',
-        'Antarmuka ramah pengguna (UI/UX Mobile First)',
-      ],
-      stack: ['React Native', 'TypeScript', 'Tailwind CSS', 'Node.js'],
-      demoUrl: '#',
-      githubUrl: 'https://github.com/rickymorenoar',
-      date: 'Agustus 2026',
-      image: '',
     },
   ];
 

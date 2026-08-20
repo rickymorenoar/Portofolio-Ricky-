@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ activeSection, onNavClick }) => 
         <div className="footer-top">
           <div className="footer-brand">
             <h3>Ricky Moreno A.R.</h3>
-            <p>Full-Stack Engineer</p>
+            <p>Pelajar SMK Negeri 2 Buduran</p>
           </div>
 
           {/* Footer Navigation that moves/highlights active section just like header */}

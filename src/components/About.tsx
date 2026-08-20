@@ -44,16 +44,16 @@ export const About: React.FC = () => {
           <div className="about-left animate-left">
             <h3 className="about-subtitle">Kepribadian & Filosofi Kerja</h3>
             <p className="about-text">
-              Saya adalah seorang pelajar web developer yang sangat antusias terhadap teknologi baru dan pemecahan masalah. Dalam setiap proyek yang saya kerjakan, saya selalu mengutamakan penulisan kode yang bersih (clean code), terstruktur, dan mudah dipelihara.
+              Saya adalah seorang pelajar dari SMK Negeri 2 Buduran yang menjadi IT developer yang sangat antusias terhadap teknologi baru dan pemecahan masalah. Dalam setiap proyek yang saya kerjakan, saya selalu mengutamakan kerapian, terstruktur, dan mudah dipelihara.
             </p>
             <p className="about-text">
               Kepribadian saya yang tenang, komunikatif, dan senang berkolaborasi membuat saya dapat beradaptasi dengan cepat di lingkungan kerja tim maupun individu. Saya percaya bahwa komunikasi yang jelas dan pemahaman empati terhadap kebutuhan pengguna adalah kunci utama untuk melahirkan produk digital berkualitas.
             </p>
             <p className="about-text">
-              Di luar aspek teknis coding, saya sangat menikmati proses mendesain antarmuka pengguna (UI/UX) yang intuitif. Memperhatikan detail kecil seperti micro-interactions dan transisi yang halus adalah hal yang selalu saya upayakan demi meningkatkan kenyamanan pengguna ketika berselancar di website yang saya bangun.
+              Fun fact: Saya memiliki hobbi bermain bola volly dan merakit robotik. Selain itu, saya juga sebenarnya masuk ke dalam SMK Negeri 2 Buduran karena paksaan dari orang tua. Saya sebenarnya ingin masuk ke dalam SMK Antartika 2 Sidoarjo di jurusan Teknik Mekatronika.
             </p>
             <p className="about-text">
-              Sebagai seorang pengembang, filosofi utama saya adalah "apa yang sudah diambil harus diselesaikan". Saya percaya bahwa menyelesaikan sebuah tanggung jawab hingga tuntas, menghadapi setiap masalah dan tantangan di dalamnya adalah kunci utama untuk terus berkembang dan melahirkan produk digital berkualitas.
+              Saya juga memiliki prinsip dalam kehidupan yaitu "apa yang sudah dimulai harus diselesaikan". Prinsip ini saya pegang teguh dalam hidup, karena saya percaya bahwa konsistensi dan ketekunan adalah kunci untuk mencapai hasil yang memuaskan.
             </p>
           </div>
 
