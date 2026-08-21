@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp, Home, User, Code2, FolderKanban, Mail } from 'lucide-react';
 import './Footer.css';
 
 interface FooterProps {
@@ -9,11 +9,11 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ activeSection, onNavClick }) => {
   const footerItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Me' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'Home', icon: <Home size={15} /> },
+    { id: 'about', label: 'About Me', icon: <User size={15} /> },
+    { id: 'skills', label: 'Skills', icon: <Code2 size={15} /> },
+    { id: 'projects', label: 'Projects', icon: <FolderKanban size={15} /> },
+    { id: 'contact', label: 'Contact', icon: <Mail size={15} /> },
   ];
 
   const handleLinkClick = (e: React.MouseEvent, id: string) => {
@@ -48,7 +48,8 @@ export const Footer: React.FC<FooterProps> = ({ activeSection, onNavClick }) => 
                     className={`footer-nav-link ${activeSection === item.id ? 'active' : ''}`}
                     onClick={(e) => handleLinkClick(e, item.id)}
                   >
-                    {item.label}
+                    <span className="footer-nav-icon">{item.icon}</span>
+                    <span>{item.label}</span>
                   </a>
                 </li>
               ))}

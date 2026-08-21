@@ -52,6 +52,15 @@
   transition: all 0.25s ease;
   position: relative;
   padding: 0.3rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.footer-nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-nav-link:hover {

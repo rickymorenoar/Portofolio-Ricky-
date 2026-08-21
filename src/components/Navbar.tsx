@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Home, User, Code2, FolderKanban, Mail } from 'lucide-react';
 import './Navbar.css';
 
 interface NavbarProps {
   activeSection: string;
   onNavClick: (id: string) => void;
-  /**
-   * Saat true, navbar dipaksa memakai tampilan solid + blur (class 'scrolled glass')
-   * terlepas dari posisi scroll. Dipakai supaya navbar tidak transparan/tembus
-   * ketika modal project (mobile) sedang terbuka.
-   */
   forceSolid?: boolean;
-  /**
-   * Dipanggil tepat sebelum navigasi terjadi (klik logo/menu/hamburger link).
-   * Dipakai App untuk menutup modal project yang sedang terbuka, supaya user
-   * tidak menavigasi sambil modal masih kebuka di belakang.
-   */
   onBeforeNavigate?: () => void;
 }
 
@@ -23,7 +13,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick, force
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Monitor scroll for applying a shadow/border on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -36,7 +25,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick, force
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock scroll when mobile navbar drawer is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -49,11 +37,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick, force
   }, [isOpen]);
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Me' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'home', label: 'Home', icon: <Home size={16} />, mobileIcon: <Home size={22} /> },
+    { id: 'about', label: 'About Me', icon: <User size={16} />, mobileIcon: <User size={22} /> },
+    { id: 'skills', label: 'Skills', icon: <Code2 size={16} />, mobileIcon: <Code2 size={22} /> },
+    { id: 'projects', label: 'Projects', icon: <FolderKanban size={16} />, mobileIcon: <FolderKanban size={22} /> },
+    { id: 'contact', label: 'Contact', icon: <Mail size={16} />, mobileIcon: <Mail size={22} /> },
   ];
 
   const handleLinkClick = (id: string) => {
@@ -62,7 +50,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick, force
     onNavClick(id);
   };
 
-  // Navbar tampil solid+blur jika sudah di-scroll ATAU dipaksa solid dari luar (modal terbuka)
   const showSolid = scrolled || forceSolid;
 
   return (
@@ -86,7 +73,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick, force
                     handleLinkClick(item.id);
                   }}
                 >
-                  {item.label}
+                  <span className="nav-icon">{item.icon}</span>
+                  <span>{item.label}</span>
                 </a>
               </li>
             ))}
@@ -103,7 +91,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick, force
         </button>
       </div>
 
-      {/* Mobile Drawer Menu */}
       <div className={`navbar-mobile-drawer ${isOpen ? 'open' : ''}`}>
         <ul className="navbar-mobile-links">
           {navItems.map((item) => (
@@ -116,7 +103,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavClick, force
                   handleLinkClick(item.id);
                 }}
               >
-                {item.label}
+                <span className="nav-mobile-icon">{item.mobileIcon}</span>
+                <span>{item.label}</span>
               </a>
             </li>
           ))}
