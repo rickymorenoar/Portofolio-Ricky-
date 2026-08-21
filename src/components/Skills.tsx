@@ -206,7 +206,7 @@ export const Skills: React.FC = () => {
             <div 
               key={skill.name} 
               className="skill-card animate-fade" 
-              style={{ animationDelay: `${index * 0.08}s` }}
+              style={{ transitionDelay: `${index * 0.08}s` }}
             >
               <div className="skill-card-top">
                 <div className="skill-icon-container" style={{ borderColor: `${skill.color}25` }}>

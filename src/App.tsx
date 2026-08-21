@@ -16,34 +16,49 @@ function App() {
   // user menekan menu navigasi sementara modal masih terbuka.
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
 
-  // Scroll Spy Implementation using IntersectionObserver
+  // Scroll Spy & Scroll Reveal Observer Implementation
   useEffect(() => {
     const sections = document.querySelectorAll('section');
-    
-    // We adjust the rootMargin to detect the active section when it fills the upper middle part of the viewport
-    const observerOptions = {
-      root: null,
-      rootMargin: '-30% 0px -40% 0px',
-      threshold: 0,
-    };
 
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
+    // Make home section visible immediately on load
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+      homeSection.classList.add('is-visible');
+    }
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    
+    // Observer for Active Navbar Section
+    const activeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-30% 0px -40% 0px', threshold: 0 }
+    );
+
+    // Observer for Scroll Reveal Animations
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
     sections.forEach((section) => {
-      observer.observe(section);
+      activeObserver.observe(section);
+      revealObserver.observe(section);
     });
 
     return () => {
       sections.forEach((section) => {
-        observer.unobserve(section);
+        activeObserver.unobserve(section);
+        revealObserver.unobserve(section);
       });
     };
   }, []);

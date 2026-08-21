@@ -153,32 +153,46 @@ section {
   transform: translateY(-2px);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
+/* Super Smooth Scroll-Triggered Reveal Animations */
+.animate-fade,
+.animate-left,
+.animate-right {
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
 .animate-fade {
-  animation: fadeIn 0.8s ease forwards;
+  transform: translateY(18px);
 }
 
 .animate-left {
-  animation: slideInLeft 0.8s ease forwards;
+  transform: translateX(-24px);
 }
 
 .animate-right {
-  animation: slideInRight 0.8s ease forwards;
+  transform: translateX(24px);
+}
+
+/* Active State when Section or Element is in Viewport */
+section.is-visible .animate-fade,
+section.is-visible .animate-left,
+section.is-visible .animate-right,
+.animate-fade.is-visible,
+.animate-left.is-visible,
+.animate-right.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade,
+  .animate-left,
+  .animate-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* Glassmorphism utility */
